@@ -1,0 +1,55 @@
+{
+  "name": "@dnlup/cut",
+  "version": "1.0.0",
+  "description": "A stream size validator",
+  "keywords": [
+    "stream",
+    "size",
+    "validator"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "nyc --reporter=lcov  --reporter=text-summary ava",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
+    "postrelease": "git push --follow-tags origin master"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnlup/cut.git"
+  },
+  "author": "Daniele Belardi <dwnon.dnl@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnlup/cut/issues"
+  },
+  "homepage": "https://github.com/dnlup/cut#readme",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "ava": "^3.3.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "markdown-toc": "^1.2.0",
+    "nyc": "^15.0.0",
+    "standard": "^14.3.1",
+    "standard-version": "^7.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
