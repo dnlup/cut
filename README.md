@@ -1,5 +1,7 @@
 # cut
 
+![Tests](https://github.com/dnlup/cut/workflows/Tests/badge.svg)
+
 > A stream size validator
 
 <!-- toc -->
