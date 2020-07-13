@@ -45,7 +45,7 @@
     "markdown-toc": "^1.2.0",
     "nyc": "^15.0.0",
     "standard": "^14.3.1",
-    "standard-version": "^7.1.0",
+    "standard-version": "^8.0.1",
     "yaml-validator": "^2.2.0"
   },
   "config": {
