@@ -3,6 +3,5 @@ module.exports = {
     const list = filenames.map(filename => `'markdown-toc -i ${filename}`)
     return list
   },
-  '*.js': ['standard --fix'],
-  '*.{yml,yaml}': ['yaml-validator']
+  '*.js': ['standard --fix']
 }

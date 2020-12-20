@@ -45,8 +45,7 @@
     "markdown-toc": "^1.2.0",
     "nyc": "^15.1.0",
     "standard": "^16.0.3",
-    "standard-version": "^9.0.0",
-    "yaml-validator": "^3.0.0"
+    "standard-version": "^9.0.0"
   },
   "config": {
     "commitizen": {
