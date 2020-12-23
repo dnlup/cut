@@ -13,9 +13,13 @@
   ],
   "scripts": {
     "lint": "standard --fix",
+    "lint:fix": "standard --fix --verbose | snazzy",
     "test": "nyc --reporter=lcov  --reporter=text-summary ava",
+    "release:check": "npm ci && npm run lint && npm test",
+    "prerelease": "npm run release:check",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
-    "postrelease": "git push --follow-tags origin master"
+    "postrelease": "npm run push && npm publish",
+    "push": "git push origin --follow-tags `git rev-parse --abbrev-ref HEAD`"
   },
   "publishConfig": {
     "access": "public"
@@ -41,6 +45,7 @@
     "lint-staged": "^10.5.1",
     "markdown-toc": "^1.2.0",
     "nyc": "^15.1.0",
+    "snazzy": "^9.0.0",
     "standard": "^16.0.3",
     "standard-version": "^9.0.0"
   },
