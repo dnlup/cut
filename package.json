@@ -15,11 +15,13 @@
     "lint": "standard --fix",
     "lint:fix": "standard --fix --verbose | snazzy",
     "test": "nyc --reporter=lcov  --reporter=text-summary ava",
-    "release:check": "npm ci && npm run lint && npm test",
-    "prerelease": "npm run release:check",
-    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
+    "prerelease": "npm cit",
+    "release": "HUSKY=0 standard-version",
     "postrelease": "npm run push && npm publish",
-    "push": "git push origin --follow-tags `git rev-parse --abbrev-ref HEAD`"
+    "prenext": "npm cit",
+    "next": "HUSKY=0 standard-version --prerelease",
+    "postnext": "npm run push && npm publish --tag next",
+    "prepare": "husky install"
   },
   "publishConfig": {
     "access": "public"
