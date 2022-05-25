@@ -48,7 +48,7 @@
     "markdown-toc": "^1.2.0",
     "nyc": "^15.1.0",
     "snazzy": "^9.0.0",
-    "standard": "^16.0.3",
+    "standard": "^17.0.0",
     "standard-version": "^9.0.0"
   },
   "dependencies": {}
